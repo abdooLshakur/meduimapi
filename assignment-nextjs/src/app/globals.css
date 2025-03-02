@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-holder{
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.nav-wrapper{
+   font-size:  large;
+   font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.links{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    
+    align-items: center;
+}
+.links a{
+    padding: 10px 10px;
+    color: white;
+    outline: none;
+}
+.links a:hover{
+    border: 1px solid white;
+}
+/*  */
+.content-holder{
+    /* background-image: url(./1000_F_289813209_0gnMc8MY9VBmedx55nMNEsHzS15O91L0.jpg); */
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 460px;
+}
