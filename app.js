@@ -12,7 +12,7 @@ const path = require("path");
 app.use(express.json({ limit: '9mb' }));
 app.use(express.urlencoded({extended: true}))
 app.use(cors({
-    origin: ["http://localhost:3000", "https://meduimapi-kd3u.onrender.com"], // Allow frontend origins
+    origin: "*", 
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
