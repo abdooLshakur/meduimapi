@@ -5,13 +5,18 @@ const app = express();
 const mongoose = require("mongoose")
 const UserRoutes = require('./routes/Userroutes')
 const ArticleRoutes = require('./routes/ArticleRoutes')
-// const cors = require('cors')
+const cors = require('cors')
 const path = require("path");
 
 
 app.use(express.json({ limit: '9mb' }));
 app.use(express.urlencoded({extended: true}))
-app.use(cors())
+app.use(cors({
+    origin: ["http://localhost:3000", "https://meduimapi-kd3u.onrender.com"], // Allow frontend origins
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 const dbUrl = process.env.DB_URL;
 
